@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap');
+
+
 button {
   background-color: Transparent;
   background-repeat:no-repeat;
@@ -5,5 +8,7 @@ button {
   cursor:pointer;
   overflow: hidden;
   font-size: 100px;
+  font-family: 'Rubik Maze', cursive;
+  color: rgb(136,200,255)
 }
 

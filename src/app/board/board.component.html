@@ -1,9 +1,21 @@
-<h1>Current Player: {{player}}</h1>
-<button (click)="newGame()">Start new Game</button>
 <h2 *ngIf="winner">Player {{player}} won the game!</h2>
-<main>
-  <app-square *ngFor="let val of squares; let i = index"
-              [value]="val"
-              (click)="makeMove(i)">
-  </app-square>
-</main>
+
+  <div fxFlexFill fxLayout="row" fxLayoutAlign="space-around center" >
+    <mat-card fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-title>Current Player: {{player}}</mat-card-title>
+      <mat-card-actions fxLayout="row" fxLayoutGap="15%">
+        <mat-icon matTooltip="Start new Game" (click)="newGame()">replay</mat-icon>
+        <mat-icon matTooltip="Back to Menu">home</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+
+    <main>
+      <app-square *ngFor="let val of squares; let i = index"
+                  [value]="val"
+                  (click)="makeMove(i)">
+      </app-square>
+    </main>
+  </div>
+
+
+
