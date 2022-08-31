@@ -1,11 +1,11 @@
-<h2 *ngIf="winner">Player {{player}} won the game!</h2>
+<!--<h2 *ngIf="winner">Player {{player}} won the game!</h2>-->
 
   <div fxFlexFill fxLayout="row" fxLayoutAlign="space-around center" >
     <mat-card fxLayout="column" fxLayoutAlign="center center">
       <mat-card-title>Current Player: {{player}}</mat-card-title>
       <mat-card-actions fxLayout="row" fxLayoutGap="15%">
         <mat-icon matTooltip="Start new Game" (click)="newGame()">replay</mat-icon>
-        <mat-icon matTooltip="Back to Menu">home</mat-icon>
+        <mat-icon [routerLink]="['/']" matTooltip="Back to Menu">home</mat-icon>
       </mat-card-actions>
     </mat-card>
 

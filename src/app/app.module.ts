@@ -10,15 +10,19 @@ import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { MenuComponent } from './menu/menu.component';
-import {AppRoutingModule} from "../app-routing.module";
+import {AppRoutingModule} from "./app-routing.module";
 import {MatButtonModule} from "@angular/material/button";
+import {RouterModule} from "@angular/router";
+import { ModeDialogComponent } from './mode-dialog/mode-dialog.component';
+import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
     AppComponent,
     SquareComponent,
     BoardComponent,
-    MenuComponent
+    MenuComponent,
+    ModeDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +33,10 @@ import {MatButtonModule} from "@angular/material/button";
     MatTooltipModule,
     AppRoutingModule,
     MatButtonModule,
+    RouterModule,
+    MatDialogModule,
   ],
-  providers: [],
+  providers: [MatDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

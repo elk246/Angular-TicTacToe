@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {BoardComponent} from "./app/board/board.component";
-import {MenuComponent} from "./app/menu/menu.component";
+import {BoardComponent} from "./board/board.component";
+import {MenuComponent} from "./menu/menu.component";
 
 const routes: Routes = [
   {path: 'easyGame', component: BoardComponent},

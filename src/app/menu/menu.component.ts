@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ModeDialogComponent} from "../mode-dialog/mode-dialog.component";
+import {MatDialog} from "@angular/material/dialog";
+import {tap} from "rxjs";
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  public openModeDialog() {
+    this.dialog.open(ModeDialogComponent, {
+      disableClose: false,
+      panelClass: 'modeDialog',
+      width: '30%',
+      height: '25%',
+    })
   }
 
 }
