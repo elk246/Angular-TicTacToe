@@ -6,7 +6,6 @@
       <mat-icon [routerLink]="['/']" matTooltip="Back to Menu">home</mat-icon>
     </mat-card-actions>
   </mat-card>
-
   <main>
     <app-square *ngFor="let val of this.gameLogicService.squares; let i = index"
                 [value]="val"

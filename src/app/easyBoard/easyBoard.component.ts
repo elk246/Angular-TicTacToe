@@ -4,7 +4,7 @@ import {GameLogicServiceService} from "../service/game-logic-service/game-logic-
 @Component({
   selector: 'app-easyBoard',
   templateUrl: './easyBoard.component.html',
-  styleUrls: ['./easyBoard.component.css']
+  styleUrls: ['./easyBoard.component.scss']
 })
 export class EasyBoardComponent implements OnInit {
 

@@ -1,21 +1,19 @@
 <!--<h2 *ngIf="winner">Player {{player}} won the game!</h2>-->
-
-  <div fxFlexFill fxLayout="row" fxLayoutAlign="space-around center" >
-    <mat-card fxLayout="column" fxLayoutAlign="center center">
-      <mat-card-title>Current Player: {{this.gameLogicService.player}}</mat-card-title>
-      <mat-card-actions fxLayout="row" fxLayoutGap="15%">
-        <mat-icon matTooltip="Start new Game" (click)="this.gameLogicService.newGame(9)">replay</mat-icon>
-        <mat-icon [routerLink]="['/']" matTooltip="Back to Menu">home</mat-icon>
-      </mat-card-actions>
-    </mat-card>
-
-    <main>
-      <app-square *ngFor="let val of this.gameLogicService.squares; let i = index"
-                  [value]="val"
-                  (click)="this.gameLogicService.makeMove(i)">
-      </app-square>
-    </main>
-  </div>
+<div fxFlexFill fxLayout="row" fxLayoutAlign="space-around center" >
+  <mat-card fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-title>Current Player: {{this.gameLogicService.player}}</mat-card-title>
+    <mat-card-actions fxLayout="row" fxLayoutGap="15%">
+      <mat-icon matTooltip="Start new Game" (click)="this.gameLogicService.newGame(9)">replay</mat-icon>
+      <mat-icon [routerLink]="['/']" matTooltip="Back to Menu">home</mat-icon>
+    </mat-card-actions>
+  </mat-card>
+  <main>
+    <app-square *ngFor="let val of this.gameLogicService.squares; let i = index"
+                [value]="val"
+                (click)="this.gameLogicService.makeMove(i)">
+    </app-square>
+  </main>
+</div>
 
 
 

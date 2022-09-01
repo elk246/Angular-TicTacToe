@@ -5,13 +5,13 @@ import {MatDialog} from "@angular/material/dialog";
 @Component({
   selector: 'app-mode-dialog',
   templateUrl: './mode-dialog.component.html',
-  styleUrls: ['./mode-dialog.component.css']
+  styleUrls: ['./mode-dialog.component.scss']
 })
 export class ModeDialogComponent implements OnInit {
 
   constructor(private router: Router, private dialog: MatDialog) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
   public navigateToEasyGame() {

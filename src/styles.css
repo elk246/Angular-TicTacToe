@@ -13,3 +13,34 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 mat-dialog-container {
   background-color: rgb(49, 48, 48) !important;
 }
+
+.menu-button {
+  font-family: 'Bebas Neue', cursive;
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: rgb(136,200,255) 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.menu-button:hover {
+  background-color: rgb(136,200,255);;
+  box-shadow: white 0 -6px 8px inset;
+  transform: scale(1.125);
+}

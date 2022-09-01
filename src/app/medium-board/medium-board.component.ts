@@ -4,7 +4,7 @@ import {GameLogicServiceService} from "../service/game-logic-service/game-logic-
 @Component({
   selector: 'app-medium-board',
   templateUrl: './medium-board.component.html',
-  styleUrls: ['./medium-board.component.css']
+  styleUrls: ['./medium-board.component.scss']
 })
 export class MediumBoardComponent implements OnInit {
 

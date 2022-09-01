@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-square',
   templateUrl: './square.component.html',
-  styleUrls: ['./square.component.css']
+  styleUrls: ['./square.component.scss']
 })
 export class SquareComponent implements OnInit {
 
@@ -13,7 +13,7 @@ export class SquareComponent implements OnInit {
     this.value = null;
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }
