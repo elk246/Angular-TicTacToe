@@ -1,16 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-board',
-  templateUrl: './board.component.html',
-  styleUrls: ['./board.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class BoardComponent implements OnInit {
+export class GameLogicServiceService {
 
   squares: any[];
   xIsNext: boolean;
   winner: string;
-
 
   constructor() {
     this.squares = Array(9).fill(null);
@@ -18,21 +15,17 @@ export class BoardComponent implements OnInit {
     this.xIsNext = true;
   }
 
-  ngOnInit(): void {
-    this.newGame();
-  }
-
-  newGame() {
-    this.squares = Array(9).fill(null);
+  public newGame(size: number) {
+    this.squares = Array(size).fill(null);
     this.winner = '';
     this.xIsNext = true;
 
   }
-  get player() {
+  public get player() {
     return this.xIsNext ? 'X' : 'O';
   }
 
-  makeMove(idx: number) {
+  public makeMove(idx: number) {
     if(!this.squares[idx]) {
       this.squares.splice(idx, 1, this.player);
       this.xIsNext = !this.xIsNext;
@@ -41,7 +34,7 @@ export class BoardComponent implements OnInit {
     this.winner = this.calculateWinner();
   }
 
-  calculateWinner() {
+  private calculateWinner() {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],

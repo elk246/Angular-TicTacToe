@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-mode-dialog',
@@ -7,11 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModeDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
 
+  public navigateToEasyGame() {
+    this.dialog.closeAll();
+    this.router.navigate(['/easyGame']).then(r => {});
+  }
 
+  public navigateToMediumGame() {
+    this.dialog.closeAll();
+    this.router.navigate(['/mediumGame']).then(r => {});
   }
 
 }
