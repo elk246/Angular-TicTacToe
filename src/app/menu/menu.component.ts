@@ -19,8 +19,8 @@ export class MenuComponent implements OnInit {
     this.dialog.open(ModeDialogComponent, {
       disableClose: false,
       panelClass: 'modeDialog',
-      width: '30%',
-      height: '25%',
+      width: '20%',
+      height: '20%',
     })
   }
 

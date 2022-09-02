@@ -16,6 +16,8 @@ import {RouterModule} from "@angular/router";
 import { ModeDialogComponent } from './mode-dialog/mode-dialog.component';
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import { MediumBoardComponent } from './medium-board/medium-board.component';
+import { MediumSquareComponent } from './medium-square/medium-square.component';
+import { WinnerDialogComponent } from './winner-dialog/winner-dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MediumBoardComponent } from './medium-board/medium-board.component';
     EasyBoardComponent,
     MenuComponent,
     ModeDialogComponent,
-    MediumBoardComponent
+    MediumBoardComponent,
+    MediumSquareComponent,
+    WinnerDialogComponent
   ],
   imports: [
     BrowserModule,

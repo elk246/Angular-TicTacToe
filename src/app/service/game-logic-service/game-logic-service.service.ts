@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {IDialogData} from "../../models/IDialogData";
+import {WinnerDialogComponent} from "../../winner-dialog/winner-dialog.component";
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +11,13 @@ export class GameLogicServiceService {
   squares: any[];
   xIsNext: boolean;
   winner: string;
+  gameFinish: boolean;
 
-  constructor() {
+  constructor(private dialog: MatDialog) {
     this.squares = Array(9).fill(null);
     this.winner = '';
     this.xIsNext = true;
+    this.gameFinish = false;
   }
 
   public newGame(size: number) {
@@ -32,6 +37,19 @@ export class GameLogicServiceService {
     }
 
     this.winner = this.calculateWinner();
+
+    if(this.gameFinish){
+      let data: IDialogData;
+      data = {
+        message: 'The winner is ' + this.winner,
+      };
+      this.dialog.open(WinnerDialogComponent, {
+        width: '25%',
+        height: '20%',
+        disableClose: true,
+        data
+      });
+    }
   }
 
   private calculateWinner() {
@@ -53,6 +71,7 @@ export class GameLogicServiceService {
         this.squares[a] === this.squares[b] &&
         this.squares[a] === this.squares[c]
       ) {
+        this.gameFinish = true;
         return this.squares[a];
       }
     }

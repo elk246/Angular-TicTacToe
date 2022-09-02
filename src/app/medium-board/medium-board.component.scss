@@ -1,37 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap');
+
 main {
   display: grid;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: 200px 200px 200px;
   grid-gap: 0;
 }
 
 app-square {
   border: 1px rgb(136,200,255) solid;
   background: rgb(49, 48, 48);
-  height: 50px;
-  border-radius: 5px;
-}
-
-mat-card{
-  background: rgb(136,200,255);
-  width: 20%;
   height: 200px;
-  font-family: 'Rubik Marker Hatch', cursive;
-  font-size: 30px;
-}
-mat-card-actions{
-  width: 20%;
-  transform: scale(2);
+  border-radius: 5px;
 }
 
 mat-icon{
   cursor: pointer;
+  color: white;
+  transform: scale(3);
 }
 
 h1 {
   font-family: 'Rubik Marker Hatch', cursive;
-  font-size: 150px;
+  font-size: 50px;
   color: rgb(136,200,255);
 }
-
-
-

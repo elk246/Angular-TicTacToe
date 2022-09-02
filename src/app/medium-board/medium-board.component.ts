@@ -12,7 +12,7 @@ export class MediumBoardComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.gameLogicService.newGame(25);
+    this.gameLogicService.newGame(9);
   }
 
 }

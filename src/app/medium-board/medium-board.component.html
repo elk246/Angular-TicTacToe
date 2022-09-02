@@ -1,15 +1,14 @@
-<div fxFlexFill fxLayout="row" fxLayoutAlign="space-around center" >
-  <mat-card fxLayout="column" fxLayoutAlign="center center">
-    <mat-card-title>Current Player: {{this.gameLogicService.player}}</mat-card-title>
-    <mat-card-actions fxLayout="row" fxLayoutGap="15%">
-      <mat-icon matTooltip="Start new Game" (click)="this.gameLogicService.newGame(25)">replay</mat-icon>
-      <mat-icon [routerLink]="['/']" matTooltip="Back to Menu">home</mat-icon>
-    </mat-card-actions>
-  </mat-card>
+<!--<h2 *ngIf="winner">Player {{player}} won the game!</h2>-->
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="3%" >
+  <h1>Current Player: {{this.gameLogicService.player}}</h1>
   <main>
-    <app-square *ngFor="let val of this.gameLogicService.squares; let i = index"
-                [value]="val"
+    <app-medium-square *ngFor="let val of this.gameLogicService.squares; let i = index"
+                mediumValue="O"
                 (click)="this.gameLogicService.makeMove(i)">
-    </app-square>
+    </app-medium-square>
   </main>
+  <div fxFill fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5%">
+    <mat-icon matTooltip="Start new Game" (click)="this.gameLogicService.newGame(25)">replay</mat-icon>-->
+    <mat-icon [routerLink]="['/']" matTooltip="Back to Menu">home</mat-icon>
+  </div>
 </div>
